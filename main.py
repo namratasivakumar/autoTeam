@@ -16,9 +16,10 @@ def readCommand():
     build_id = "ProductDev_Rmp_CmpServices_UploadSimulator"
     try:
         response = requests.post(url, headers=headers, data=json.dumps({"buildType": {"id": build_id}}), verify=False)
+        print(response.text)
+        if response.status_code == 200:
+            return {"Hello": "World"}    
     except Exception as e:
         print("EXCEPTION:", e)
         
-    print(response.text)
-    if response.status_code == 200:
-        return {"Hello": "World"}
+    
