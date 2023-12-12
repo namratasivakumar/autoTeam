@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.post("/")
 def readCommand():
-    url = "https://tpteamcity.corp.theplatform.com/app/rest/buildQueue"
+    url = "http://tpteamcity.corp.theplatform.com/app/rest/buildQueue"
 
     headers = {
         "Content-Type": "application/json",
